@@ -1,5 +1,13 @@
-#ifndef __MAIN_H__
-#define __MAIN_H__
+#ifndef __MONTY_H__
+#define __MONTY_H__
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -32,4 +40,20 @@ typedef struct instruction_s
 } instruction_t;
 
 
-#endif /* __MAIN_H__ */
+/* Monty execution */
+void execute_monty(FILE *file);
+
+
+/* Pycodes implementation functions */
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+
+
+/* Helper functions */
+void free_stack(stack_t *stack);
+
+
+/* Error handler functions */
+
+
+#endif /* __MONTY_H__ */
