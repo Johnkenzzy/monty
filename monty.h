@@ -39,6 +39,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+extern instruction_t instructions[50];
 
 /* Monty execution */
 void execute_monty(FILE *file);
@@ -54,6 +55,8 @@ void free_stack(stack_t *stack);
 
 
 /* Error handler functions */
-
+void usage_error(void);
+void file_error(char *filename);
+void malloc_error(void);
 
 #endif /* __MONTY_H__ */
