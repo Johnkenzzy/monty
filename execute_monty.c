@@ -2,9 +2,9 @@
 
 
 /**
- * execute_monty - executes monty pycodes
+ * execute_monty - executes monty opcodes
  *
- * @file: file containing monty pycodes to be executed
+ * @file: file containing monty opcodes to be executed
  *
  * Return: nothing
  */
@@ -15,15 +15,17 @@ void execute_monty(FILE *file)
 	unsigned int line_number = 0;
 	stack_t *stack = NULL;
 	int i;
-	/*I'll handled the array of struct with a function*/
-	instruction_t instructions[] = {{"push", push}, {"pall", pall}, {NULL, NULL}};
 
 	while (getline(&line, &line_len, file) != -1)
 	{
+
 		opcode = strtok(line, " \n\t");
 		line_number++;
-		i = 0;
+		printf("\n%s = %ld\n", opcode, line_len);
+		if (!opcode || opcode[0] == '\0' || opcode[0] == '#')
+			continue;
 
+		i = 0;
 		while (instructions[i].opcode)
 		{
 			if (strcmp(opcode, instructions[i].opcode) == 0)
