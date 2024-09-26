@@ -21,7 +21,6 @@ void execute_monty(FILE *file)
 
 		opcode = strtok(line, " \n\t");
 		line_number++;
-		printf("\n%s = %ld\n", opcode, line_len);
 		if (!opcode || opcode[0] == '\0' || opcode[0] == '#')
 			continue;
 
