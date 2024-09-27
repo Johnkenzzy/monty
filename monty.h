@@ -57,6 +57,7 @@ void nop(stack_t **stack, unsigned int line_number);
 
 /* Helper functions */
 void free_stack(stack_t *stack);
+int is_number(char *str);
 
 
 /* Error handler functions */
