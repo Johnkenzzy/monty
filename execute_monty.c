@@ -18,10 +18,9 @@ void execute_monty(FILE *file)
 
 	while ((getline(&line, &line_len, file)) != -1)
 	{
-
 		opcode = strtok(line, " \n\t");
 		line_number++;
-		
+
 		if (!opcode || opcode[0] == '\0' || opcode[0] == '#')
 			continue;
 
