@@ -1,5 +1,5 @@
 #include "monty.h"
-
+#include <stdio.h>
 
 /**
  * execute_monty - executes monty opcodes
@@ -16,11 +16,12 @@ void execute_monty(FILE *file)
 	stack_t *stack = NULL;
 	int i;
 
-	while (getline(&line, &line_len, file) != -1)
+	while ((getline(&line, &line_len, file)) != -1)
 	{
 
 		opcode = strtok(line, " \n\t");
 		line_number++;
+		
 		if (!opcode || opcode[0] == '\0' || opcode[0] == '#')
 			continue;
 
