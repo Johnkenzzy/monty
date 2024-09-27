@@ -1,5 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
 
 /**
  * execute_monty - executes monty opcodes
