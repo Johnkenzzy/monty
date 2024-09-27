@@ -25,7 +25,7 @@ void divd(stack_t **stack, unsigned int line_number)
 		exit(1);
 	}
 
-	second->n -= first->n;
+	second->n = second->n / first->n;
 
 	*stack = second;
 	second->prev = NULL;
