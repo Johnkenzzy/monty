@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int line_number)
 	stack_t *new_stack_node;
 	char *arg = strtok(NULL, " \n\t");
 
-	if (!arg || !isdigit(arg))
+	if (!arg || !is_number(arg))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		free_stack(*stack);
