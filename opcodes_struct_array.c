@@ -7,5 +7,6 @@ instruction_t instructions[] = {
 	{"nop", nop}, {"sub", sub},
 	{"div", divd}, {"mul", mul},
 	{"pchar", pchar}, {"pstr", pstr},
-	{"mod", mod}, {NULL, NULL}
+	{"mod", mod}, {"rotl", rotl},
+	{"rotr", rotr}, {NULL, NULL}
 };
