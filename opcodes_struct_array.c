@@ -1,5 +1,6 @@
 #include "monty.h"
 
+
 instruction_t instructions[] = {
 	{"push", push}, {"pall", pall},
 	{"pint", pint}, {"pop", pop},
@@ -8,5 +9,6 @@ instruction_t instructions[] = {
 	{"div", divd}, {"mul", mul},
 	{"pchar", pchar}, {"pstr", pstr},
 	{"mod", mod}, {"rotl", rotl},
-	{"rotr", rotr}, {NULL, NULL}
+	{"rotr", rotr}, {"stack", stack},
+	{"queue", queue}, {NULL, NULL}
 };
